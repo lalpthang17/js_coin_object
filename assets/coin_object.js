@@ -48,8 +48,9 @@ function display20Flips() {
     for(let i=0; i <= 20; i++){
         coin.flip()
         container.innerHTML += coin.toString() + "<br>";
+        results.push(coin.toString())
     }
-       
+       return results
     // 4. Use a loop to flip the coin 20 times, each time displaying the result 
     // of the flip as a string on the page.  After your loop completes, return an array with 
     // the result of each flip.
@@ -59,7 +60,9 @@ function display20Images() {
     for(let i=0; i <= 20; i++){
         coin.flip()
         container.appendChild (coin.toHTML())
+        results.push(coin.toHTML())
     }
+    return results
     // 5. Use a loop to flip the coin 20 times, and display the results of each 
     // flip as an image on the page.  After your loop completes, return an array with result 
     // of each flip.
